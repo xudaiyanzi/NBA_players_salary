@@ -29,6 +29,7 @@ BPM: Box Plus/Minus
 VORP: Value Over Replacement
 FT: Free Throws
 FTA: Free Throw Attempts
+FG%: Field Goal Percentage
 
 # player_stats_df should be a on a per-game basis instead of totals to eliminate the effect of games played
 
