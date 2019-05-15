@@ -4,32 +4,32 @@ PER: Player Efficiency Rating/
 GS: Games Started/
 MP: Minutes Played/
 TS%: True Shooting %/
-FTr: Free Throw Rate
-OWS: Offensive Win Shares
-DWS: Defensive Win Shares
-WS: Win Shares
-WS/48: Win Shares Per 48 Minutes
-FG%: Field Goal Percentage
-2P%: 2-Point Field Goal Percentage
-eFG%: Effective Field Goal Percentage
-3P%: 3-Point Field Goal Percentage
-FT%: Free Throw Percentage
-3PA: 3-Point Field Goal Attempts
-ORB%: Offensive Rebound Percentage
-DRB%: Defensive Rebound Percentage
-TRB%: Total Rebound Percentage
-AST%: Assist Percentage
-STL%: Steal Percentage
-BLK%: Block Percentage
-TOV%: Turnover Percentage
-USG%: Usage Percentage
-OBPM: Offensive Box Plus/Minus
-DBPM: Defensive Box Plus/Minus
-BPM: Box Plus/Minus
-VORP: Value Over Replacement
-FT: Free Throws
-FTA: Free Throw Attempts
-FG%: Field Goal Percentage
+FTr: Free Throw Rate/
+OWS: Offensive Win Shares/
+DWS: Defensive Win Shares/
+WS: Win Shares/
+WS/48: Win Shares Per 48 Minutes/
+FG%: Field Goal Percentage/
+2P%: 2-Point Field Goal Percentage/
+eFG%: Effective Field Goal Percentage/
+3P%: 3-Point Field Goal Percentage/
+FT%: Free Throw Percentage/
+3PA: 3-Point Field Goal Attempts/
+ORB%: Offensive Rebound Percentage/
+DRB%: Defensive Rebound Percentage/
+TRB%: Total Rebound Percentage/
+AST%: Assist Percentage/
+STL%: Steal Percentage/
+BLK%: Block Percentage/
+TOV%: Turnover Percentage/
+USG%: Usage Percentage/
+OBPM: Offensive Box Plus/Minus/
+DBPM: Defensive Box Plus/Minus/
+BPM: Box Plus/Minus/
+VORP: Value Over Replacement/
+FT: Free Throws/
+FTA: Free Throw Attempts/
+FG%: Field Goal Percentage/
 
 
 # player_stats_df should be a on a per-game basis instead of totals to eliminate the effect of games played
