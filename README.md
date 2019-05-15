@@ -31,6 +31,7 @@ FT: Free Throws
 FTA: Free Throw Attempts
 FG%: Field Goal Percentage
 
+
 # player_stats_df should be a on a per-game basis instead of totals to eliminate the effect of games played
 
 player_stats_df["MPG"]=player_stats_df["MP"]/player_stats_df["GP"]
