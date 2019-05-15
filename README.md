@@ -1,9 +1,9 @@
 
 # Columns meaning in the dataset
-PER: Player Efficiency Rating
-GS: Games Started
-MP: Minutes Played
-TS%: True Shooting %
+PER: Player Efficiency Rating/
+GS: Games Started/
+MP: Minutes Played/
+TS%: True Shooting %/
 FTr: Free Throw Rate
 OWS: Offensive Win Shares
 DWS: Defensive Win Shares
