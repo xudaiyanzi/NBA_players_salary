@@ -1,11 +1,13 @@
 <?xml version='1.0' encoding='utf-8' ?>
 
 <!-- build 20191.19.0321.1733                               -->
-<workbook source-build='2019.1.2 (20191.19.0321.1733)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+<workbook source-build='2019.1.2 (20191.19.0321.1733)' source-platform='mac' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
   <document-format-change-manifest>
     <SheetIdentifierTracking />
+    <SortTagCleanup />
     <WindowsPersistSimpleIdentifiers />
   </document-format-change-manifest>
+  <repository-location id='linearregressionmodel' path='/workbooks' revision='1.0' />
   <preferences>
     <preference name='ui.encoding.shelf.height' value='24' />
     <preference name='ui.shelf.height' value='26' />
@@ -15,7 +17,7 @@
       <connection class='federated'>
         <named-connections>
           <named-connection caption='method1' name='textscan.1a28ypp1khatqf14zh43n0g4i0rz'>
-            <connection class='textscan' directory='/Users/Guobao/Dropbox/Bootcamp/Projects/3/NBA_players_salary/regression/dataset for Tableau/method1' filename='method1.csv' password='' server='' />
+            <connection class='textscan' directory='/Users/Guobao/Dropbox/Bootcamp/Projects/3/NBA_players_salary/regression/dataset for Tableau/method1' filename='method1.csv' password='' server='' workgroup-auth-mode='as-is' />
           </named-connection>
         </named-connections>
         <relation connection='textscan.1a28ypp1khatqf14zh43n0g4i0rz' name='method1.csv' table='[method1#csv]' type='table'>
@@ -144,9 +146,128 @@
       <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
         <calculation class='tableau' formula='1' />
       </column>
+      <column datatype='string' name='[Overvalued]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[Residuals]' new-bin='true' />
+      </column>
+      <column datatype='real' name='[Residuals]' role='measure' type='quantitative' />
       <column caption='Usg%' datatype='real' name='[USG%]' role='measure' type='quantitative' />
+      <column datatype='string' name='[Undervalued]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[Residuals]' new-bin='true' />
+      </column>
       <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
-      <layout dim-ordering='alphabetic' dim-percentage='0.395582' measure-ordering='alphabetic' measure-percentage='0.604418' show-structure='true' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='/Users/Guobao/Documents/My Tableau Repository/Datasources/method1.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>0</ordinal>
+              <family>method1.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Name</remote-alias>
+              <ordinal>1</ordinal>
+              <family>method1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>36</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Age</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Age]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Age</remote-alias>
+              <ordinal>2</ordinal>
+              <family>method1.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Salary%</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Salary%]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Salary%</remote-alias>
+              <ordinal>3</ordinal>
+              <family>method1.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>48</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>PER</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[PER]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>PER</remote-alias>
+              <ordinal>4</ordinal>
+              <family>method1.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>44</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>USG%</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[USG%]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>USG%</remote-alias>
+              <ordinal>5</ordinal>
+              <family>method1.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>46</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Predicted Salary%</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Predicted Salary%]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Predicted Salary%</remote-alias>
+              <ordinal>6</ordinal>
+              <family>method1.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>50</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Residuals</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Residuals]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Residuals</remote-alias>
+              <ordinal>7</ordinal>
+              <family>method1.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>50</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.393574' measure-ordering='alphabetic' measure-percentage='0.606426' show-structure='true' />
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
       </semantic-values>
@@ -157,7 +278,7 @@
       <layout-options>
         <title>
           <formatted-text>
-            <run>Players that overvalued/undervalued based on the method1</run>
+            <run>Players that overvalued/undervalued based on our linear regression model</run>
           </formatted-text>
         </title>
       </layout-options>
@@ -236,7 +357,7 @@
             <mark class='Bar' />
             <style>
               <style-rule element='mark'>
-                <format attr='mark-color' value='#69aaa5' />
+                <format attr='mark-color' value='#75a1c7' />
               </style-rule>
             </style>
           </pane>
@@ -258,28 +379,105 @@
       <simple-id uuid='{DE281A15-94FA-48BF-B38B-6C03CF12D644}' />
     </worksheet>
     <worksheet name='Sheet 2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Age Distribution in Undervalued and Overvalued Players</run>
+          </formatted-text>
+        </title>
+      </layout-options>
       <table>
         <view>
-          <datasources />
+          <datasources>
+            <datasource caption='method1' name='federated.1bxab1d1nbyje517htymo1lyd7rd' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1bxab1d1nbyje517htymo1lyd7rd'>
+            <column datatype='real' name='[Age]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Name]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Residuals]' role='measure' type='quantitative' />
+            <column-instance column='[Age]' derivation='None' name='[none:Age:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Name]' derivation='None' name='[none:Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Residuals]' derivation='Sum' name='[sum:Residuals:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.1bxab1d1nbyje517htymo1lyd7rd].[none:Name:nk]' direction='ASC' using='[federated.1bxab1d1nbyje517htymo1lyd7rd].[sum:Residuals:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1bxab1d1nbyje517htymo1lyd7rd].[none:Age:qk]' value='n#,##0;-#,##0' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1bxab1d1nbyje517htymo1lyd7rd].[none:Age:qk]' value='n#,##0;-#,##0' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1bxab1d1nbyje517htymo1lyd7rd].[none:Age:qk]' num-steps='3' palette='sunrise_sunset_diverging_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Shape' />
+            <encodings>
+              <color column='[federated.1bxab1d1nbyje517htymo1lyd7rd].[none:Age:qk]' />
+              <text column='[federated.1bxab1d1nbyje517htymo1lyd7rd].[none:Age:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1bxab1d1nbyje517htymo1lyd7rd].[sum:Residuals:qk]</rows>
+        <cols>[federated.1bxab1d1nbyje517htymo1lyd7rd].[none:Name:nk]</cols>
+      </table>
+      <simple-id uuid='{218937F1-957F-412B-9229-C87E090F90DE}' />
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='method1' name='federated.1bxab1d1nbyje517htymo1lyd7rd' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1bxab1d1nbyje517htymo1lyd7rd'>
+            <column datatype='string' name='[Name]' role='dimension' type='nominal' />
+            <column datatype='real' name='[PER]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Residuals]' role='measure' type='quantitative' />
+            <column-instance column='[Name]' derivation='None' name='[none:Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[PER]' derivation='None' name='[none:PER:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Residuals]' derivation='None' name='[none:Residuals:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
           <aggregation value='true' />
         </view>
         <style />
         <panes>
-          <pane selection-relaxation-option='selection-relaxation-allow'>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow'>
             <view>
               <breakdown value='auto' />
             </view>
-            <mark class='Automatic' />
+            <mark class='Bar' />
+            <encodings>
+              <text column='[federated.1bxab1d1nbyje517htymo1lyd7rd].[none:PER:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
           </pane>
         </panes>
-        <rows />
-        <cols />
+        <rows>[federated.1bxab1d1nbyje517htymo1lyd7rd].[none:Name:nk]</rows>
+        <cols>[federated.1bxab1d1nbyje517htymo1lyd7rd].[none:Residuals:qk]</cols>
       </table>
-      <simple-id uuid='{218937F1-957F-412B-9229-C87E090F90DE}' />
+      <simple-id uuid='{6DD2DEE6-5344-4555-8FC0-1BCC07B60AFE}' />
     </worksheet>
   </worksheets>
   <windows source-height='30'>
-    <window class='worksheet' maximized='true' name='Sheet 1'>
+    <window class='worksheet' name='Sheet 1'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -307,7 +505,35 @@
       </cards>
       <simple-id uuid='{48D5273D-C7C3-4F74-9AFD-5C4645382E6B}' />
     </window>
-    <window class='worksheet' name='Sheet 2'>
+    <window class='worksheet' maximized='true' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='3' param='[federated.1bxab1d1nbyje517htymo1lyd7rd].[none:Age:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{DB6FF5A6-3484-45B4-8C3C-31C854A19D3B}' />
+    </window>
+    <window class='worksheet' name='Sheet 3'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -328,7 +554,7 @@
           </strip>
         </edge>
       </cards>
-      <simple-id uuid='{DB6FF5A6-3484-45B4-8C3C-31C854A19D3B}' />
+      <simple-id uuid='{7D3EFC80-1BF0-4FC8-8582-D7C6FBB503A3}' />
     </window>
   </windows>
 </workbook>
