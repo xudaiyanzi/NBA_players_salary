@@ -1,5 +1,5 @@
 
-# Background
+# Overview
 This project aims to explore how a variety of factors can be used to predict the salary of the NBA players from 1999-2019. Our goals for this project:
 1)	Salary prediction (discover which factors are the best predictors of an NBA player’s salary, using regression model to predict salaries).
 2)	Using cluster model to find out similarity or categorizing players (for example, utilizing physical characteristics data to predict performance of NBA players).
